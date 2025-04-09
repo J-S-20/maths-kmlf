@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>KMLF Maths Learning</title>
+  <style>
+    /* Reset & Base Styles */
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: #fff;
+      color: #1B2840;
+    }
+    
+    a {
+      text-decoration: none;
+    }
+
+    /* Navigation Bar */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #1B2840;
+      padding: 10px 20px;
+    }
+    
+    .logo {
+      font-size: 1.5em;
+      color: #fff;
+      font-weight: bold;
+    }
+    
+    .nav-links {
+      display: flex;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    
+    .nav-links li {
+      margin: 0 10px;
+    }
+    
+    .nav-links a {
+      color: #fff;
+      padding: 8px 12px;
+      border-radius: 4px;
+      transition: background 0.3s;
+    }
+    
+    .nav-links a:hover {
+      background-color: #fff;
+      color: #1B2840;
+    }
+    
+    /* Mobile Menu Toggle Button */
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+    
+    .menu-toggle div {
+      width: 25px;
+      height: 3px;
+      background-color: #fff;
+      margin: 4px 0;
+    }
+    
+    /* About Section with White Background */
+    .about {
+      background-color: #fff;
+      color: #1B2840;
+      padding: 60px 20px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .about-img {
+      flex: 0 0 auto;
+      margin: 20px;
+      text-align: center;
+    }
+    
+    .about-img img {
+      width: 230px;
+      height: 219px;
+      object-fit: contain;
+      border: 2px solid #1B2840;
+      border-radius: 8px;
+    }
+    
+    .about-content {
+      flex: 1;
+      margin: 20px;
+      text-align: center;
+    }
+    
+    .about-content h1 {
+      margin-bottom: 10px;
+    }
+    
+    /* Footer Section */
+    footer {
+      background-color: #1B2840;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+    }
+    
+    footer a {
+      color: #fff;
+    }
+    
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+      }
+      
+      .nav-links li {
+        text-align: center;
+        margin: 10px 0;
+      }
+      
+      .menu-toggle {
+        display: flex;
+      }
+      
+      .about {
+        flex-direction: column;
+        padding: 40px 20px;
+      }
+      
+      .about-content {
+        margin: 10px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="logo">KMLF</div>
+    
+    <!-- Mobile Menu Toggle -->
+    <div class="menu-toggle" id="mobile-menu">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    
+    <!-- Navigation Links -->
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#login">Login</a></li>
+      <li><a href="#register">Register</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+  
+  <!-- About Section with White Background -->
+  <section class="about" id="about">
+    <div class="about-img">
+      <img src="whitelogo.png" alt="About Image" />
+    </div>
+    <div class="about-content">
+      <h1>Welcome to KMLF Maths Learning</h1>
+      <p>Enhance your math skills with our comprehensive lessons and interactive exercises.</p>
+      <!-- Additional details can be added here in the future -->
+    </div>
+  </section>
+  
+  <!-- Footer Section with Contact Details -->
+  <footer id="contact">
+    <h2>Contact Us</h2>
+    <p>Email: info@kmlf.com | Phone: +1 234 567 890</p>
+    <p>&copy; 2025 KMLF Maths Learning. All rights reserved.</p>
+  </footer>
+  
+  <script>
+    // JavaScript for Mobile Menu Toggle
+    const menuToggle = document.getElementById('mobile-menu');
+    const navLinks = document.getElementById('nav-links');
+    
+    menuToggle.addEventListener('click', () => {
+      // Toggle display between none and flex
+      if (navLinks.style.display === 'flex') {
+        navLinks.style.display = 'none';
+      } else {
+        navLinks.style.display = 'flex';
+      }
+    });
+    
+    // Ensure nav is displayed correctly when resizing window
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 768) {
+        navLinks.style.display = 'flex';
+      } else {
+        navLinks.style.display = 'none';
+      }
+    });
+  </script>
+</body>
+</html>
